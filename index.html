@@ -1365,8 +1365,85 @@
         right: 1rem;
     }
 }
+/* Navigation Logo Styles */
+/* Navigation Logo Styles */
+.nav-logo {
+    position: absolute;
+    left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+}
 
+.nav-logo-img {
+    height: 60px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+    transition: all 0.3s ease;
+    border-radius: 0; /* Removed circular shape */
+    border: none;
+    padding: 0;
+    background: transparent;
+    mix-blend-mode: multiply;
+}
 
+.nav-logo-img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+}
+
+/* Mobile Responsive Styles for Logo */
+@media (max-width: 768px) {
+    .nav-logo {
+        left: 1rem;
+    }
+    
+    .nav-logo-img {
+        height: 60px;
+    }
+    
+    .nav-toggle {
+        right: 1rem;
+    }
+    
+    .nav-menu {
+        padding-top: 5rem;
+    }
+    
+    /* Update mobile menu logo */
+    .nav-menu::before {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+        width: 160px;
+        height: 60px;
+        background-image: url('images/logo.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: left center;
+        border-radius: 0; /* Removed circular shape */
+        border: none;
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo-img {
+        height: 55px;
+    }
+    
+    .nav-logo {
+        left: 0.8rem;
+    }
+    
+    .nav-menu::before {
+        width: 140px;
+        height: 55px;
+        left: 1.5rem;
+    }
+}
     </style>
 </head>
 <body>
@@ -1384,9 +1461,15 @@
     </div>
 
     <!-- Navigation -->
-    <!-- Navigation -->
 <nav id="navbar">
     <div class="nav-container">
+        <!-- Add Logo Here -->
+        <div class="nav-logo">
+            <a href="#home">
+                <img src="images/logo.jpeg" alt="Asa Ngqeza Professional Accountants" class="nav-logo-img">
+            </a>
+        </div>
+        
         <div class="nav-toggle" id="navToggle">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -1922,10 +2005,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 // Mobile Burger Menu Functionality
+// Mobile Burger Menu Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-menu a');
+    const navLogo = document.querySelector('.nav-logo a');
     
     // Create overlay element
     const overlay = document.createElement('div');
@@ -1946,13 +2031,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking on overlay
     overlay.addEventListener('click', toggleMenu);
     
-    // Close menu when clicking on nav links
+    // Close menu when clicking on nav links (including logo)
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
             if (navMenu.classList.contains('active')) {
                 toggleMenu();
             }
         });
+    });
+    
+    // Close menu when clicking on logo (for mobile)
+    navLogo.addEventListener('click', function() {
+        if (navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
     });
     
     // Close menu on escape key
