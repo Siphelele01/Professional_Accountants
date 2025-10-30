@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asa Ngqeza Professional Accountants</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #2a2a2a;
+            --secondary-brown: #8b7355;
+            --accent-burgundy: #8b4c5c;
+            --light-bg: #f9f9f9;
+            --text-dark: #333333;
+            --text-medium: #555555;
+            --text-light: #777777;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.12);
+            --gradient: linear-gradient(135deg, var(--secondary-brown), var(--accent-burgundy));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Particles Background */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+       /* Clean Professional Hero Section */
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 2rem;
+        margin-top: -3rem;
+    animation: fadeIn 1s ease-out;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+}
+.company-logo {
+    max-width: 200px;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+    transition: transform 0.3s ease;
+    background: transparent;
+    mix-blend-mode: multiply;
+    border-radius: 50%;
+    border: 3px solid var(--secondary-brown);
+    padding: 10px;
+    background: white;
+}
+.company-logo:hover {
+    transform: scale(1.05);
+}
+/* Hero Text */
+.hero-text {
+    animation: fadeInUp 1s ease-out 0.6s both;
+    text-align: center;
+}
+
+
+.hero-main-title {
+    margin-bottom: 1.5rem;
+}
+
+.title-primary {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.title-secondary {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-brown);
+    letter-spacing: 1px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CTA Button */
+.cta-button-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1.2rem 2.8rem;
+    background: var(--gradient);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 115, 85, 0.2);
+}
+
+.cta-button-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 115, 85, 0.3);
+}
+
+.cta-arrow {
+    transition: transform 0.3s ease;
+}
+
+.cta-button-primary:hover .cta-arrow {
+    transform: translateX(4px);
+}
+
+/* Scroll Hint */
+.scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1s ease-out 1.2s both;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 40px;
+    background: var(--secondary-brown);
+    opacity: 0.6;
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scrollPulse {
+    0%, 100% {
+        transform: scaleY(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scaleY(1.2);
+        opacity: 1;
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-text {
+        font-size: 2.5rem;
+    }
+    
+    .title-primary {
+        font-size: 2.8rem;
+    }
+    
+    .title-secondary {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1.1rem;
+    }
+    
+    .cta-button-primary {
+        padding: 1rem 2.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .logo-text {
+        font-size: 2rem;
+    }
+    
+    .title-primary {
+        font-size: 2.2rem;
+    }
+    
+    .title-secondary {
+        font-size: 1rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+}
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            list-style: none;
+            flex-wrap: wrap;
+            padding: 0 2rem;
+        }
+
+        nav a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--secondary-brown);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        section.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-divider {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--medium-gray), transparent);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: var(--gradient);
+        }
+
+        .section-intro {
+            text-align: center;
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+
+/* About Section */
+#about {
+    background: var(--light-gray);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.about-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 100%;
+    min-height: 400px;
+    background-image: url('https://media.istockphoto.com/id/2198966747/photo/couple-closing-real-estate-contract-with-real-estate-agent.jpg?s=1024x1024&w=is&k=20&c=Xs0AKdbMB9nXlhkPY_O0_POt0Zf7cTCe5gv5bjJhm4w=');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.about-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(139, 76, 92, 0.1));
+    z-index: 1;
+}
+
+.about-image:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    height: 100%;
+}
+
+.about-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--secondary-brown);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--gradient);
+    transition: height 0.5s ease;
+}
+
+.about-card:hover::before {
+    height: 100%;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.about-card h3 {
+    color: var(--secondary-brown);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.about-card p {
+    position: relative;
+    z-index: 1;
+    line-height: 1.7;
+}
+
+.values-card {
+    background: var(--white);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--secondary-brown);
+    position: relative;
+    overflow: hidden;
+    margin-top: 2rem;
+}
+
+.values-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--gradient);
+    transition: height 0.5s ease;
+}
+
+.values-card:hover::before {
+    height: 100%;
+}
+
+.values-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.values-card h3 {
+    color: var(--secondary-brown);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.values-card ul {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.values-card li {
+    padding: 0.5rem 0;
+    color: var(--text-medium);
+    position: relative;
+    z-index: 1;
+}
+
+.values-card li strong {
+    color: var(--secondary-brown);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-image {
+        min-height: 300px;
+        order: -1;
+    }
+    
+    .about-card {
+        height: auto;
+    }
+}
+
+        /* Director Section */
+        #director {
+            background: var(--white);
+        }
+
+        .director-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+            align-items: center;
+        }
+
+        .director-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            height: 500px;
+            background-image: url('https://images.unsplash.com/photo-1727293375491-f683bfcbe6ee?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=368');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .director-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(139, 76, 92, 0.1));
+            z-index: 1;
+        }
+
+        .director-image:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .director-card {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--accent-burgundy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .director-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(139, 76, 92, 0.05), transparent);
+            transition: width 0.5s ease;
+        }
+
+        .director-card:hover::before {
+            width: 100%;
+        }
+
+        .director-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .director-card h3 {
+            color: var(--accent-burgundy);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .director-card .title {
+            color: var(--secondary-brown);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .director-card ul {
+            list-style: none;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .director-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-medium);
+        }
+
+        .director-card li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-brown);
+        }
+
+        /* Services Section */
+#services {
+    background: var(--light-gray);
+}
+
+.services-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    align-items: center;
+}
+
+.services-image {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    height: 300px;
+    background-image: url('https://plus.unsplash.com/premium_photo-1661387650705-3301ec2f4f92?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1032');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.services-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(139, 76, 92, 0.1));
+    z-index: 1;
+}
+
+.services-image:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--secondary-brown);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.service-card h3 {
+    color: var(--secondary-brown);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card ul {
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card li {
+    padding: 0.4rem 0;
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    padding-left: 1.2rem;
+    position: relative;
+}
+
+.service-card li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-brown);
+    font-weight: bold;
+}
+
+/* Responsive adjustments for Services */
+@media (max-width: 768px) {
+    .services-header {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-image {
+        height: 250px;
+        order: -1;
+    }
+}
+
+        /* Testimonials Section */
+        #testimonials {
+            background: var(--white);
+        }
+
+        .testimonials-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid var(--medium-gray);
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 1rem;
+            left: 1.5rem;
+            font-size: 4rem;
+            color: var(--accent-burgundy);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+            z-index: 0;
+        }
+
+        .testimonial-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 4px;
+            background: var(--gradient);
+            transition: width 0.5s ease;
+        }
+
+        .testimonial-card:hover::after {
+            width: 100%;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .testimonial-card .quote {
+            font-style: italic;
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card .client-name {
+            color: var(--secondary-brown);
+            font-weight: 600;
+            text-align: right;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Team Section */
+        #team {
+            background: var(--light-gray);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: transform 0.3s ease;
+            background: var(--white);
+            padding: 2rem 1rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .team-member::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background: var(--gradient);
+            opacity: 0.1;
+            transition: height 0.3s ease;
+        }
+
+        .team-member:hover::before {
+            height: 100%;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .team-placeholder {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            background: var(--gradient);
+            opacity: 0.7;
+            border: 3px solid var(--secondary-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-tagline {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--accent-burgundy);
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+    font-style: italic;
+}
+
+        .team-member h3 {
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--light-gray);
+        }
+
+        .contact-content {
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .contact-info h3 {
+            color: var(--secondary-brown);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info p {
+            color: var(--text-medium);
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-info strong {
+            color: var(--secondary-brown);
+        }
+
+        .cta-text {
+            margin-top: 2rem;
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--text-medium);
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            padding: 2rem;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Loading Animation */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(139, 115, 85, 0.2);
+            border-radius: 50%;
+            border-top-color: var(--secondary-brown);
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .logo-container img {
+                width: 200px;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            .about-content,
+            .director-content,
+            .services-header,
+            .testimonials-header {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid,
+            .testimonials-grid,
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .service-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .about-image,
+            .director-image,
+            .services-image,
+            .testimonials-image {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.8rem 2rem;
+                font-size: 1rem;
+            }
+
+            .director-card,
+            .contact-info {
+                padding: 2rem 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Particles Background -->
+    <div id="particles-js"></div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#director">Director</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+    <div class="video-background">
+        <video autoplay muted loop playsinline>
+            <!-- Replace with your actual video file -->
+            <source src="videos/office-walking.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img src="images/office-fallback.jpg" alt="Office Background">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    
+    <div class="hero-content">
+        <div class="logo-container">
+            <img src="images/logo.jpeg" alt="Asa Ngqeza Professional Accountants" class="company-logo">
+        </div>
+        
+        <div class="hero-text">
+    <h1 class="hero-main-title">
+        <span class="title-primary">ASA NGQEZA</span>
+        <span class="title-secondary">Professional Accountants</span>
+    </h1>
+    <p class="hero-tagline">Driving Growth, Innovation and Transformation</p>
+    <p class="hero-description">Your Trusted Partner for Financial Excellence and Business Growth</p>
+    <a href="#contact" class="cta-button-primary">
+        Get Started
+        <svg class="cta-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
+        
+        
+</header>
+    <!-- About Section -->
+<!-- About Section -->
+<section id="about">
+    <div class="section-divider"></div>
+    <div class="container">
+        <h2>Who We Are</h2>
+        <div class="about-content">
+            <div class="about-image"></div>
+            <div class="about-cards">
+                <div class="about-card">
+                    <h3>Mission Statement</h3>
+                    <p>We strive to deliver exceptional accounting services that exceed our clients' expectations. We are committed to building long-term relationships, providing innovative solutions, and maintaining the highest level of professionalism and integrity.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Vision Statement</h3>
+                    <p>To be the trusted advisor of choice for businesses and individuals seeking expert accounting and financial guidance, empowering our clients to achieve their goals and succeed in an ever-changing financial landscape.</p>
+                </div>
+            </div>
+        </div>
+        <div class="values-card">
+            <h3>Our Values</h3>
+            <ul>
+                <li><strong>Integrity:</strong> Highest standards of honesty, transparency, and ethics</li>
+                <li><strong>Excellence:</strong> High-quality services that exceed expectations</li>
+                <li><strong>Client Focus:</strong> Personalized solutions for unique requirements</li>
+                <li><strong>Innovation:</strong> Embracing the latest developments and technologies</li>
+            </ul>
+        </div>
+    </div>
+</section>
+    <!-- Director Section -->
+    <section id="director">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2>Meet Our Director</h2>
+            <div class="director-content">
+                <div class="director-image"></div>
+                <div class="director-card">
+                    <h3>Asanda Ngqeza</h3>
+                    <p class="title">Professional Accountant (SA) | Director of ANS</p>
+                    <ul>
+                        <li>Bachelor of Commerce in Accounting - University of Free State</li>
+                        <li>Completed 3 years of accounting articles and passed board examination</li>
+                        <li>Registered with SARS as a Tax Practitioner</li>
+                        <li>Vast experience in the accounting and tax industry</li>
+                        <li>Member of the South African Institute of Professional Accountants (SAIPA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-header">
+                <div class="services-intro">
+                    <p class="section-intro">
+                        We provide accurate, professional, and cost-effective services that drive business growth and success. Our team of experts is dedicated to delivering exceptional financial solutions tailored to your specific needs.
+                    </p>
+                </div>
+                <div class="services-image"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Financial Reporting</h3>
+                    <ul>
+                        <li>Compilation of Annual Financial Statements</li>
+                        <li>Bookkeeping to trial balance</li>
+                        <li>Bank and petty cash reconciliation</li>
+                        <li>Creditors and Debtors reconciliation</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Tax Services</h3>
+                    <ul>
+                        <li>Company and individual compliance</li>
+                        <li>Personal income tax returns and corporate returns</li>
+                        <li>Provisional tax calculation and submission</li>
+                        <li>Declared and deemed dividends</li>
+                        <li>Tax consultations and advice</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Payroll Management</h3>
+                    <ul>
+                        <li>Monthly payroll processing</li>
+                        <li>Payslip preparation and issuing</li>
+                        <li>IRP5s/IT3s certificates creation</li>
+                        <li>Employer salary recons (EMP501)</li>
+                        <li>Workman's compensation return of earnings</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Compliance Services</h3>
+                    <ul>
+                        <li>Filing of CIPC mandatory Annual returns</li>
+                        <li>Tax Compliance Pins application</li>
+                        <li>BEE Affidavits issuing</li>
+                        <li>Objections to SARS completion and submission</li>
+                        <li>Tax directives application</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Registration Services</h3>
+                    <ul>
+                        <li>Company registration with CIPC and SARS</li>
+                        <li>Department of Labour & Compensation Commissioner</li>
+                        <li>VAT, PAYE, UIF, and SDL Registrations</li>
+                        <li>Company profile amendments</li>
+                        <li>Employee registration and removal</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <h3>Additional Services</h3>
+                    <ul>
+                        <li>Company de-registration with CIPC and SARS</li>
+                        <li>Director changes and company conversions</li>
+                        <li>Address changes</li>
+                        <li>Personal income tax number registration</li>
+                        <li>Tax number retrieval</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!-- Testimonials Section -->
+<section id="testimonials">
+    <div class="section-divider"></div>
+    <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonials-intro">
+            <p class="section-intro">
+                Don't just take our word for it. Here's what our valued clients have to say about our services and the impact we've made on their businesses.
+            </p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p class="quote">"We were impressed with the level of service provided by Asa Ngqeza Professional Accountants. Their expertise in tax planning and compliance has saved us time and money. Their friendly and approachable team has made a significant difference in our financial management."</p>
+                <p class="client-name">— Themba Holdings</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Asa Ngqeza Professional Accountants has been our trusted accounting partner for several years, providing exceptional service and expertise. Their team is professional, responsive, and proactive, always going the extra mile to ensure our financial needs are met."</p>
+                <p class="client-name">— Manabana Trading</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"Asa Ngqeza Professional Accountants has been instrumental in helping us navigate complex financial regulations and ensuring compliance. Their team's expertise and dedication have given us peace of mind, allowing us to focus on growing our business."</p>
+                <p class="client-name">— Reba Electrical</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Lisakhanya Lase</h3>
+                </div>
+                <div class="team-member">
+                    <div class="team-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Asanda Ngqeza</h3>
+                </div>
+                <div class="team-member">
+                    <div class="team-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Asekho Mgidi</h3>
+                </div>
+                <div class="team-member">
+                    <div class="team-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Lelethu Namke</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-divider"></div>
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p><strong>Email:</strong> info@asaccountants.co.za</p>
+                    <p><strong>Location:</strong> South Africa</p>
+                    <p class="cta-text">Ready to take your financial management to the next level? Contact us today for a consultation.</p>
+                    <a href="mailto:info@asaccountants.co.za" class="cta-button">Email Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Asa Ngqeza Professional Accountants. All rights reserved.</p>
+            <p>Member of the South African Institute of Professional Accountants (SAIPA)</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Loading Animation
+        window.addEventListener('load', function() {
+            const loading = document.querySelector('.loading');
+            setTimeout(() => {
+                loading.classList.add('hidden');
+            }, 1000);
+        });
+
+        // Particles.js Background
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#8b7355" },
+                shape: { type: "circle" },
+                opacity: { value: 0.3, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#8b7355",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const backToTop = document.querySelector('.back-to-top');
+            
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+                backToTop.classList.add('active');
+            } else {
+                navbar.classList.remove('scrolled');
+                backToTop.classList.remove('active');
+            }
+        });
+
+        // Back to Top functionality
+        document.querySelector('.back-to-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Service Card Click Animation
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 200);
+            });
+        });
+
+        // Parallax Effect for Hero Section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('header');
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+    const video = document.querySelector('.video-background video');
+    
+    // Ensure video plays correctly on mobile
+    if (video) {
+        video.addEventListener('loadedmetadata', function() {
+            video.play().catch(function(error) {
+                console.log('Video autoplay failed:', error);
+            });
+        });
+        
+        // Fallback if video fails to load
+        video.addEventListener('error', function() {
+            const videoContainer = document.querySelector('.video-background');
+            videoContainer.style.backgroundImage = 'url("images/office-fallback.jpg")';
+            videoContainer.style.backgroundSize = 'cover';
+            videoContainer.style.backgroundPosition = 'center';
+            video.style.display = 'none';
+        });
+    }
+    
+    // Enhanced parallax effect
+    window.addEventListener('scroll', () => {
+        const scrolled = window.pageYOffset;
+        const parallax = document.querySelector('header');
+        const videoOverlay = document.querySelector('.video-overlay');
+        
+        if (parallax) {
+            parallax.style.transform = `translateY(${scrolled * 0.5}px)`;
+        }
+        
+        // Fade out overlay slightly on scroll
+        if (videoOverlay && scrolled < 300) {
+            const opacity = 0.85 - (scrolled / 300) * 0.2;
+            videoOverlay.style.opacity = opacity;
+        }
+    });
+});
+    </script>
+</body>
+</html>
