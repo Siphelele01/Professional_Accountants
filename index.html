@@ -39,12 +39,12 @@
         }
 
         /* Particles Background */
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
+      #particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
        /* Clean Professional Hero Section */
 
@@ -372,7 +372,21 @@
 
 /* About Section */
 #about {
-    background: var(--light-gray);
+    position: relative;
+}
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#about .container {
+    position: relative;
+    z-index: 1;
 }
 
 .about-content {
@@ -1518,6 +1532,38 @@
     z-index: 3;
     margin-top: 80px;
 }
+/* Particles Background for Director, Services, Testimonials, and Team Sections */
+#director, #services, #testimonials, #team {
+    position: relative;
+}
+
+#director::before, #services::before, #testimonials::before, #team::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+#director .container, #services .container, #testimonials .container, #team .container {
+    position: relative;
+    z-index: 1;
+}
+/* Ensure particles containers are visible */
+#particles-about,
+#particles-director,
+#particles-services,
+#particles-testimonials,
+#particles-team {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
     </style>
 </head>
 <body>
@@ -1596,6 +1642,7 @@
     <!-- About Section -->
 <!-- About Section -->
 <section id="about">
+    <div id="particles-about" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
     <div class="section-divider"></div>
     <div class="container">
         <h2>Who We Are</h2>
@@ -1625,7 +1672,8 @@
 </section>
     <!-- Director Section -->
     <section id="director">
-        <div class="section-divider"></div>
+    <div id="particles-director" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+    <div class="section-divider"></div>
         <div class="container">
             <h2>Meet Our Director</h2>
             <div class="director-content">
@@ -1647,7 +1695,8 @@
 
     <!-- Services Section -->
     <section id="services">
-        <div class="section-divider"></div>
+    <div id="particles-services" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+    <div class="section-divider"></div>
         <div class="container">
             <h2>Our Services</h2>
             <div class="services-header">
@@ -1722,9 +1771,8 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <!-- Testimonials Section -->
 <section id="testimonials">
+    <div id="particles-testimonials" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
     <div class="section-divider"></div>
     <div class="container">
         <h2>What Our Clients Say</h2>
@@ -1752,7 +1800,8 @@
 
     <!-- Team Section -->
     <section id="team">
-        <div class="section-divider"></div>
+    <div id="particles-team" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
+    <div class="section-divider"></div>
         <div class="container">
             <h2>Our Team</h2>
             <div class="team-grid">
@@ -1888,16 +1937,16 @@
         particlesJS('particles-js', {
             particles: {
                 number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: "#8b7355" },
+                color: { value: "#8b4c5c" },
                 shape: { type: "circle" },
                 opacity: { value: 0.3, random: true },
                 size: { value: 3, random: true },
                 line_linked: {
                     enable: true,
                     distance: 150,
-                    color: "#8b7355",
+                    color: "#8b4c5c",
                     opacity: 0.2,
-                    width: 1
+                    width: 1.5
                 },
                 move: {
                     enable: true,
@@ -1919,7 +1968,149 @@
             },
             retina_detect: true
         });
+        // Particles for Director Section
+particlesJS('particles-director', {
+    particles: {
+        number: { value: 70, density: { enable: true, value_area: 800 } },
+        color: { value: "#8b4c5c" },
+        shape: { type: "circle" },
+        opacity: { value: 0.35, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+            enable: true,
+            distance: 130,
+            color: "#8b4c5c",
+            opacity: 0.25,
+            width: 1.5
+        },
+        move: {
+            enable: true,
+            speed: 1.8,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+        }
+    },
+    retina_detect: true
+});
 
+// Particles for Services Section
+particlesJS('particles-services', {
+    particles: {
+        number: { value: 75, density: { enable: true, value_area: 800 } },
+        color: { value: "#8b4c5c" },
+        shape: { type: "circle" },
+        opacity: { value: 0.4, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+            enable: true,
+            distance: 140,
+            color: "#8b4c5c",
+            opacity: 0.3,
+            width: 1.5
+        },
+        move: {
+            enable: true,
+            speed: 2.2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+        }
+    },
+    retina_detect: true
+});
+
+// Particles for Testimonials Section
+particlesJS('particles-testimonials', {
+    particles: {
+        number: { value: 65, density: { enable: true, value_area: 800 } },
+        color: { value: "#8b4c5c" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+            enable: true,
+            distance: 120,
+            color: "#8b4c5c",
+            opacity: 0.25,
+            width: 1.5
+        },
+        move: {
+            enable: true,
+            speed: 1.6,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+        }
+    },
+    retina_detect: true
+});
+
+// Particles for Team Section
+particlesJS('particles-team', {
+    particles: {
+        number: { value: 60, density: { enable: true, value_area: 800 } },
+        color: { value: "#8b4c5c" },
+        shape: { type: "circle" },
+        opacity: { value: 0.35, random: true },
+        size: { value: 3, random: true },
+        line_linked: {
+            enable: true,
+            distance: 110,
+            color: "#8b4c5c",
+            opacity: 0.2,
+            width: 1.5
+        },
+        move: {
+            enable: true,
+            speed: 1.4,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false
+        }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: true, mode: "push" },
+            resize: true
+        }
+    },
+    retina_detect: true
+});
         // Smooth scrolling
         // Enhanced Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
