@@ -1745,6 +1745,37 @@
         height: 10px;
     }
 }
+/* Team Section Banner Image */
+.team-banner {
+    width: 100%;
+    height: 500px; /* Increased height */
+    background-image: url('images/home.jpeg');
+    background-size: contain; /* Changed from cover to contain */
+    background-position: center;
+    background-repeat: no-repeat; /* Prevent repeating */
+    background-color: var(--light-gray); /* Add background color for empty space */
+    position: relative;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.team-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(139, 115, 85, 0.1), rgba(139, 76, 92, 0.1));
+    z-index: 1;
+}
+
+.team-banner:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
     </style>
 </head>
 <body>
@@ -1992,11 +2023,13 @@
     </div>
 </section>
 
-    <!-- Team Section -->
 <section id="team">
     <div id="particles-team" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
     <div class="section-divider"></div>
     <div class="container">
+        <!-- ADD THIS BANNER IMAGE HERE -->
+        <div class="team-banner"></div>
+        
         <h2>Our Team</h2>
         <div class="team-grid">
             <div class="team-member">
