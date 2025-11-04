@@ -1521,9 +1521,17 @@
 }
 
 .slide-3 {
-    background-image: url('images/slide2.jpeg');
+    background-image: url('images/slide3.jpeg');
+     background-position: center 15%;
+}
+.slide-4 {
+    background-image: url('images/slide4.jpeg');
+    background-position: center 15%;
 }
 
+.slide-5 {
+    background-image: url('images/slide5.jpeg');
+}
 .slideshow-overlay {
     position: absolute;
     top: 0;
@@ -1745,23 +1753,27 @@
         height: 10px;
     }
 }
-/* Team Section Banner Image */
-.team-banner {
-    width: 100%;
-    height: 500px; /* Increased height */
+
+/* Values Card Layout */
+.values-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+.values-image {
+    height: 300px;
     background-image: url('images/home.jpeg');
-    background-size: contain; /* Changed from cover to contain */
-    background-position: center;
-    background-repeat: no-repeat; /* Prevent repeating */
-    background-color: var(--light-gray); /* Add background color for empty space */
+    background-size: cover;
+    background-position: center 17%;
     position: relative;
-    margin-bottom: 3rem;
-    border-radius: 15px;
+    border-radius: 10px;
     overflow: hidden;
     box-shadow: var(--shadow);
 }
 
-.team-banner::before {
+.values-image::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1772,9 +1784,22 @@
     z-index: 1;
 }
 
-.team-banner:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
+.values-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .values-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-image {
+        height: 200px;
+        order: -1;
+    }
 }
     </style>
 </head>
@@ -1825,6 +1850,9 @@
         <div class="slide slide-1 active"></div>
         <div class="slide slide-2"></div>
         <div class="slide slide-3"></div>
+        <div class="slide slide-4"></div>
+    <div class="slide slide-5"></div>
+   
         <div class="slideshow-overlay"></div>
         
         <!-- Navigation Arrows -->
@@ -1840,6 +1868,9 @@
             <div class="slideshow-dot active" data-slide="0"></div>
             <div class="slideshow-dot" data-slide="1"></div>
             <div class="slideshow-dot" data-slide="2"></div>
+             <div class="slideshow-dot" data-slide="3"></div>
+        <div class="slideshow-dot" data-slide="4"></div>
+        
         </div>
     </div>
     
@@ -1885,6 +1916,9 @@
             </div>
         </div>
         <div class="values-card">
+    <div class="values-content">
+        <div class="values-image"></div>
+        <div class="values-text">
             <h3>Our Values</h3>
             <ul>
                 <li><strong>Integrity:</strong> Highest standards of honesty, transparency, and ethics</li>
@@ -1893,6 +1927,8 @@
                 <li><strong>Innovation:</strong> Embracing the latest developments and technologies</li>
             </ul>
         </div>
+    </div>
+</div>
     </div>
 </section>
     <!-- Director Section -->
@@ -2028,7 +2064,7 @@
     <div class="section-divider"></div>
     <div class="container">
         <!-- ADD THIS BANNER IMAGE HERE -->
-        <div class="team-banner"></div>
+       
         
         <h2>Our Team</h2>
         <div class="team-grid">
@@ -2050,12 +2086,7 @@
                 </div>
                 <h3>Asekho Mgidi</h3>
             </div>
-            <div class="team-member">
-                <div class="team-photo">
-                    <img src="images/Lelethu.jpeg" alt="Lelethu Namake" class="team-img">
-                </div>
-                <h3>Lelethu Namake</h3>
-            </div>
+            
         </div>
     </div>
 </section>
