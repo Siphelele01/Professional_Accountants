@@ -1825,7 +1825,14 @@
     margin-top: 3rem;
     align-items: start;
 }
+.community-content:nth-child(4) .community-images {
+    order: 2; /* Images on RIGHT for second section */
+}
 
+.community-content:nth-child(4) .community-text {
+    order: 1; /* Text on LEFT for second section */
+    margin-top : -4rem;
+}
 /* Swap order: images left, text right */
 .community-images {
     display: flex;
@@ -1857,6 +1864,7 @@
 .community-image-2 {
     background-image: url('images/community2.jpeg');
     height: 750px;
+    margin-top : -1.5rem;
 }
 
 .community-image::before {
@@ -2250,6 +2258,7 @@
     </section>
 
 <!-- Community Development Section -->
+<!-- Community Development Section -->
 <section id="community">
     <div id="particles-community" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 0;"></div>
     <div class="section-divider"></div>
@@ -2258,13 +2267,22 @@
         <p class="section-intro">Making a Difference Through Sports and Education</p>
         
         <div class="community-content">
+            <div class="community-images">
+                <div class="community-image community-image-1"></div>
+            </div>
+            
             <div class="community-text">
                 <h3>Supporting Mdantsane Finest Netball Academy</h3>
                 
                 <p>Asa Ngqeza Professional Accountants (Pty) Ltd is proud to be one of the sponsors of the Mdantsane Finest Netball Academy, an inspiring community initiative dedicated to promoting fitness, teamwork, and social connection among young people.</p>
                 
                 <p>The Academy provides a supportive environment that encourages participation in sport for children and players of all ages and abilities, fostering both athletic excellence and personal development.</p>
-                
+            </div>
+        </div>
+        
+        <!-- Second row with text on left, image on right -->
+        <div class="community-content" style="margin-top: 4rem;">
+            <div class="community-text">
                 <div class="community-highlights">
                     <h4>Our Commitment to Community</h4>
                     <ul>
@@ -2279,12 +2297,9 @@
                 <p>Beyond the company's institutional support, Ms. Asanda Ngqeza, in her personal capacity, dedicates her time to co-coach, train, and mentor players—fostering both athletic skills and personal growth within the team.</p>
                 
                 <p>The Mdantsane Finest Netball Academy continues to make a meaningful difference in our community, and we actively encourage other businesses and individuals to join us in supporting this impactful initiative through sponsorships and partnerships.</p>
-                
-                
             </div>
             
             <div class="community-images">
-                <div class="community-image community-image-1"></div>
                 <div class="community-image community-image-2"></div>
             </div>
         </div>
